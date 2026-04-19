@@ -1,0 +1,19 @@
+<mat-toolbar class="topbar">
+    <div class="container topbar__content">
+        <a class="brand" routerLink="/inicio" aria-label="Voltar para o início">
+            <img src="./assets/img/logo.png" alt="Logo da Loja Games">
+            <div class="brand__text">
+                <strong>Loja Virtual</strong>
+                <span>Games em destaque</span>
+            </div>
+        </a>
+
+        <nav class="topbar__nav" aria-label="Navegação principal">
+            <a routerLink="/inicio" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Início</a>
+            <a routerLink="/inicio" fragment="jogos-destaque">Destaques</a>
+            <a routerLink="/login" routerLinkActive="is-active">Acesso</a>
+        </nav>
+
+        <a class="topbar__cta" routerLink="/login">Entrar</a>
+    </div>
+</mat-toolbar>

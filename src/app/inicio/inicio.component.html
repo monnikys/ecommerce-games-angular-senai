@@ -1,0 +1,241 @@
+<main class="inicio-page">
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <span class="section-kicker">Projeto acadêmico em Angular</span>
+                    <h1 class="hero-title">Uma loja virtual mais bonita, organizada e com aparência profissional.</h1>
+                    <p class="hero-text">
+                        Esta interface apresenta uma proposta de e-commerce com Angular Material, Bootstrap e TypeScript,
+                        valorizando a navegação, a vitrine de jogos e a tela de acesso.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 hero-actions">
+                        <a routerLink="/login" class="btn-brand">Acessar conta</a>
+                        <a routerLink="/inicio" fragment="jogos-destaque" class="btn-outline-brand">Ver destaques</a>
+                    </div>
+
+                    <div class="row g-3 hero-metrics">
+                        <div class="col-sm-4">
+                            <div class="metric-card">
+                                <strong>Angular</strong>
+                                <span>Componentes bem separados</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="metric-card">
+                                <strong>Material</strong>
+                                <span>Cartões e ícones elegantes</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="metric-card">
+                                <strong>Bootstrap</strong>
+                                <span>Layout responsivo e limpo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="hero-panel">
+                        <div class="hero-panel__top">
+                            <span>Ação em mundo aberto</span>
+                            <strong>Mais vendido</strong>
+                        </div>
+                        <img
+                            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/library_hero.jpg?t=1765387725"
+                            alt="Arte promocional do jogo Grand Theft Auto V"
+                            loading="lazy">
+                        <div class="hero-panel__body">
+                            <h2>Grand Theft Auto V</h2>
+                            <p>
+                                Um dos jogos mais conhecidos do mundo, com mapa aberto, ação intensa e uma campanha marcante.
+                            </p>
+                            <div class="hero-tags">
+                                <span>Ação</span>
+                                <span>Mundo aberto</span>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container showcase-section">
+        <div class="section-heading">
+            <span class="section-kicker">Vitrine principal</span>
+            <h2>Novidades e promoções da semana</h2>
+            <p>O carrossel apresenta as principais campanhas visuais da loja de forma dinâmica e organizada.</p>
+        </div>
+
+        <div id="carouselExampleAutoplaying" class="carousel slide showcase-carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active showcase-slide">
+                    <img
+                        src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/library_hero.jpg?t=1765387725"
+                        class="d-block w-100"
+                        alt="Campanha visual do jogo Grand Theft Auto V"
+                        loading="lazy">
+                    <div class="carousel-caption showcase-slide__caption">
+                        <span class="showcase-slide__badge">Campanha principal</span>
+                        <h3>Grand Theft Auto V</h3>
+                        <p>Visual impactante para abrir a vitrine com um dos maiores sucessos do gênero mundo aberto.</p>
+                    </div>
+                </div>
+                <div class="carousel-item showcase-slide">
+                    <img
+                        src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/cf8cec802dc47d0f24b75f9eee135e96812e2652/library_hero.jpg"
+                        class="d-block w-100"
+                        alt="Campanha visual do jogo Cyberpunk 2077"
+                        loading="lazy">
+                    <div class="carousel-caption showcase-slide__caption">
+                        <span class="showcase-slide__badge">Destaque futurista</span>
+                        <h3>Cyberpunk 2077</h3>
+                        <p>Uma arte promocional forte para representar novidades, tecnologia e atmosfera premium na home.</p>
+                    </div>
+                </div>
+                <div class="carousel-item showcase-slide">
+                    <img
+                        src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/library_hero.jpg"
+                        class="d-block w-100"
+                        alt="Campanha visual do jogo God of War"
+                        loading="lazy">
+                    <div class="carousel-caption showcase-slide__caption">
+                        <span class="showcase-slide__badge">Narrativa em alta</span>
+                        <h3>God of War</h3>
+                        <p>Campanha visual com foco em aventura cinematográfica para deixar a seção mais profissional.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="container benefits-section">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <article class="feature-card h-100">
+                    <mat-icon>dashboard_customize</mat-icon>
+                    <h3>Layout mais organizado</h3>
+                    <p>As áreas de destaque, catálogo e acesso agora têm melhor hierarquia visual e leitura mais clara.</p>
+                </article>
+            </div>
+            <div class="col-md-4">
+                <article class="feature-card h-100">
+                    <mat-icon>verified</mat-icon>
+                    <h3>Visual mais profissional</h3>
+                    <p>Cores equilibradas, espaçamento consistente e cartões mais refinados reforçam a apresentação do projeto.</p>
+                </article>
+            </div>
+            <div class="col-md-4">
+                <article class="feature-card h-100">
+                    <mat-icon>bolt</mat-icon>
+                    <h3>Experiência fluida</h3>
+                    <p>O uso combinado de Angular Material e Bootstrap ajuda a manter a interface moderna e responsiva.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="jogos-destaque" class="catalogo-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-kicker">Seleção especial</span>
+                <h2>Jogos em destaque</h2>
+                <p>Os produtos estão organizados em cartões com contexto visual, descrição resumida e preço em evidência.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <mat-card class="product-card h-100">
+                        <div class="product-card__badge">Aventura narrativa</div>
+                        <img
+                            mat-card-image
+                            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/library_hero.jpg"
+                            alt="Arte promocional do jogo God of War"
+                            loading="lazy">
+                        <mat-card-content class="product-card__content">
+                            <h3>God of War</h3>
+                            <p>Uma campanha marcante com combate intenso, mitologia nórdica e visual cinematográfico.</p>
+                            <div class="product-card__meta">
+                                <span>Mitologia</span>
+                                <span>Ação</span>
+                            </div>
+                        </mat-card-content>
+                        <div class="product-card__footer">
+                            <div>
+                                <small>Valor ilustrativo</small>
+                                <strong>R$ 199,90</strong>
+                            </div>
+                            <a mat-flat-button class="product-card__button" routerLink="/login">Acessar conta</a>
+                        </div>
+                    </mat-card>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <mat-card class="product-card h-100">
+                        <div class="product-card__badge">RPG de fantasia</div>
+                        <img
+                            mat-card-image
+                            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/library_hero.jpg?t=1767883716"
+                            alt="Arte promocional do jogo ELDEN RING"
+                            loading="lazy">
+                        <mat-card-content class="product-card__content">
+                            <h3>ELDEN RING</h3>
+                            <p>Um dos RPGs mais famosos dos últimos anos, com exploração livre, chefes épicos e atmosfera única.</p>
+                            <div class="product-card__meta">
+                                <span>Mundo aberto</span>
+                                <span>Desafio</span>
+                            </div>
+                        </mat-card-content>
+                        <div class="product-card__footer">
+                            <div>
+                                <small>Valor ilustrativo</small>
+                                <strong>R$ 229,90</strong>
+                            </div>
+                            <a mat-flat-button class="product-card__button" routerLink="/login">Acessar conta</a>
+                        </div>
+                    </mat-card>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <mat-card class="product-card h-100">
+                        <div class="product-card__badge">Faroeste em mundo aberto</div>
+                        <img
+                            mat-card-image
+                            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/library_hero.jpg?t=1759502961"
+                            alt="Arte promocional do jogo Red Dead Redemption 2"
+                            loading="lazy">
+                        <mat-card-content class="product-card__content">
+                            <h3>Red Dead Redemption 2</h3>
+                            <p>Uma aventura famosa pelo realismo, pela narrativa forte e por um dos mundos abertos mais elogiados.</p>
+                            <div class="product-card__meta">
+                                <span>Aventura</span>
+                                <span>Narrativa</span>
+                            </div>
+                        </mat-card-content>
+                        <div class="product-card__footer">
+                            <div>
+                                <small>Valor ilustrativo</small>
+                                <strong>R$ 179,90</strong>
+                            </div>
+                            <a mat-flat-button class="product-card__button" routerLink="/login">Acessar conta</a>
+                        </div>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
