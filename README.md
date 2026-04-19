@@ -80,10 +80,22 @@ npm install
 npm start
 ```
 
-3. Acesse a aplicação no navegador:
+3. Se quiser subir a API fake com o `db.json`, execute em outro terminal:
+
+```bash
+npm run api
+```
+
+4. Acesse a aplicação no navegador:
 
 ```text
 http://localhost:4200/
+```
+
+API fake:
+
+```text
+http://localhost:3000/produtos
 ```
 
 ## Como gerar a versão de produção

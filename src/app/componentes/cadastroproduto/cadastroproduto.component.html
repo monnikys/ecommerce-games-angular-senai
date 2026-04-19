@@ -1,0 +1,132 @@
+<main class="admin-page">
+    <section class="container">
+        <div class="row justify-content-center align-items-start g-4">
+            <div class="col-xl-7 col-lg-7">
+                <div class="login-card admin-card">
+                    <span class="section-kicker">{{ produto.id ? 'Edicao de produto' : 'Novo produto' }}</span>
+                    <h1>{{ produto.id ? 'Editar produto' : 'Cadastrar produto' }}</h1>
+                    <p class="login-card__intro">
+                        Formulario administrativo para cadastrar ou atualizar produtos sem alterar o visual da pagina inicial.
+                    </p>
+
+                    <form class="d-grid gap-3" (ngSubmit)="salvarProduto()">
+                        <div>
+                            <label for="produtoNome">Nome do Produto</label>
+                            <input
+                                id="produtoNome"
+                                type="text"
+                                class="form-control"
+                                [(ngModel)]="produto.produto"
+                                name="produto"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="produtoCategoria">Categoria</label>
+                            <input
+                                id="produtoCategoria"
+                                type="text"
+                                class="form-control"
+                                [(ngModel)]="produto.categoria"
+                                name="categoria"
+                                placeholder="Ex.: Aventura narrativa">
+                        </div>
+
+                        <div>
+                            <label for="produtoDescricao">Descricao</label>
+                            <textarea
+                                id="produtoDescricao"
+                                class="form-control admin-textarea"
+                                [(ngModel)]="produto.descricao"
+                                name="descricao"
+                                required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="produtoFoto">Foto (URL da imagem)</label>
+                            <input
+                                id="produtoFoto"
+                                type="text"
+                                class="form-control"
+                                [(ngModel)]="produto.foto"
+                                name="foto"
+                                required>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="produtoPreco">Preco</label>
+                                <input
+                                    id="produtoPreco"
+                                    type="number"
+                                    class="form-control"
+                                    [(ngModel)]="produto.preco"
+                                    name="preco"
+                                    min="0"
+                                    step="0.01"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="produtoTags">Tags (separadas por virgula)</label>
+                                <input
+                                    id="produtoTags"
+                                    type="text"
+                                    class="form-control"
+                                    [(ngModel)]="tagsTexto"
+                                    name="tagsTexto"
+                                    placeholder="Acao, Mundo aberto">
+                            </div>
+                        </div>
+
+                        <div class="form-check admin-check">
+                            <input
+                                id="produtoDestaque"
+                                type="checkbox"
+                                class="form-check-input"
+                                [(ngModel)]="produto.destaque"
+                                name="destaque">
+                            <label class="form-check-label" for="produtoDestaque">Marcar como produto em destaque</label>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-3 pt-2">
+                            <button type="submit" class="btn btn-primary">
+                                {{ produto.id ? 'Atualizar produto' : 'Cadastrar produto' }}
+                            </button>
+                            <a routerLink="/painel-principal" class="btn-outline-brand">Cancelar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-xl-5 col-lg-5">
+                <aside class="login-aside admin-preview">
+                    <span class="section-kicker">Pre-visualizacao</span>
+                    <h2>{{ produto.produto || 'Produto sem nome' }}</h2>
+                    <p>{{ produto.descricao || 'A descricao do produto aparecera aqui enquanto voce preenche o formulario.' }}</p>
+
+                    <div class="admin-preview__media" *ngIf="produto.foto; else semImagem">
+                        <img [src]="produto.foto" [alt]="produto.produto || 'Imagem do produto'">
+                    </div>
+
+                    <ng-template #semImagem>
+                        <div class="admin-preview__placeholder">
+                            Informe a URL da imagem para visualizar a capa do produto.
+                        </div>
+                    </ng-template>
+
+                    <div class="admin-preview__meta">
+                        <div>
+                            <small>Categoria</small>
+                            <strong>{{ produto.categoria || 'Nao informada' }}</strong>
+                        </div>
+                        <div>
+                            <small>Preco</small>
+                            <strong>{{ produto.preco != null ? (produto.preco | currency:'BRL':'symbol':'1.2-2') : 'A definir' }}</strong>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>

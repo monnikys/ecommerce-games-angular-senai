@@ -1,0 +1,86 @@
+<main class="admin-page">
+    <section class="container">
+        <div class="admin-shell">
+            <div class="admin-header">
+                <span class="section-kicker">Painel principal</span>
+                <div class="admin-header__content">
+                    <div>
+                        <h1>Lista de produtos</h1>
+                        <p>
+                            Gerencie os produtos cadastrados pela API local sem mexer na vitrine publica da loja.
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a routerLink="/cadastro-produto" class="btn-brand">Novo produto</a>
+                        <a routerLink="/inicio" class="btn-outline-brand">Voltar ao site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-table-card">
+                <div class="admin-table-card__top">
+                    <div>
+                        <h2>Produtos cadastrados</h2>
+                        <p>Consumo do `json-server` em `http://localhost:3000/produtos`.</p>
+                    </div>
+                    <button type="button" class="btn-outline-brand" (click)="listarProdutos()">Atualizar lista</button>
+                </div>
+
+                <div *ngIf="erro" class="admin-feedback admin-feedback--error">
+                    {{ erro }}
+                </div>
+
+                <div *ngIf="carregando" class="admin-feedback">
+                    Carregando produtos...
+                </div>
+
+                <div *ngIf="!carregando" class="table-responsive">
+                    <table class="table table-hover align-middle admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Imagem</th>
+                                <th>Produto</th>
+                                <th>Descricao</th>
+                                <th>Preco</th>
+                                <th>Acoes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let produto of produtos">
+                                <td>{{ produto.id }}</td>
+                                <td>
+                                    <img
+                                        class="admin-table__image"
+                                        [src]="produto.foto"
+                                        [alt]="produto.produto">
+                                </td>
+                                <td>
+                                    <strong>{{ produto.produto }}</strong>
+                                    <span *ngIf="produto.categoria" class="admin-table__subtext">{{ produto.categoria }}</span>
+                                </td>
+                                <td>{{ produto.descricao }}</td>
+                                <td>{{ produto.preco | currency:'BRL':'symbol':'1.2-2' }}</td>
+                                <td>
+                                    <div class="admin-table__actions">
+                                        <button type="button" class="btn btn-primary btn-sm" (click)="editarProduto(produto.id)">Editar</button>
+                                        <button type="button" class="btn btn-danger btn-sm" (click)="excluirProduto(produto.id)">Excluir</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr *ngIf="!produtos.length">
+                                <td colspan="6">
+                                    <div class="admin-empty">
+                                        Nenhum produto encontrado. Use o botao "Novo produto" para comecar o cadastro.
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

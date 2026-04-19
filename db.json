@@ -1,0 +1,96 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "produto": "God of War",
+      "categoria": "Aventura narrativa",
+      "descricao": "Com a vingança contra os deuses do Olimpo em um passado distante, Kratos agora vive como um mortal no reino dos deuses e monstros nórdicos. É nesse mundo duro e implacável que ele deve lutar para sobreviver... e ensinar seu filho a fazer o mesmo.",
+      "foto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/ss_f1bff24d3967a21d303d95e11ed892e3d9113057.1920x1080.jpg?t=1763059412",
+      "preco": 199.9,
+      "destaque": true,
+      "tags": [
+        "Mitologia",
+        "Acao",
+        "3D"
+      ]
+    },
+    {
+      "id": 2,
+      "produto": "ELDEN RING",
+      "categoria": "RPG de fantasia",
+      "descricao": "O NOVO RPG DE AÇÃO E FANTASIA. Levante-se, Maculado, e seja guiado pela graça para portar o poder do Anel Prístino e se tornar um Lorde Prístino nas Terras Intermédias.",
+      "foto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/ss_b1b91299d7e4b94201ac840aa64de54d9f5cb7f3.1920x1080.jpg?t=1767883716",
+      "preco": 274.5,
+      "destaque": true,
+      "tags": [
+        "Mundo aberto",
+        "Desafio",
+        "RPG"
+      ]
+    },
+    {
+      "id": 3,
+      "produto": "Red Dead Redemption 2",
+      "categoria": "Mundo aberto",
+      "descricao": "Arthur Morgan e a gangue Van der Linde são forçados a fugir. Com agentes federais e caçadores de recompensas no seu encalço, a gangue precisa roubar, assaltar e lutar para sobreviver no impiedoso coração dos Estados Unidos.",
+      "foto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/ss_bac60bacbf5da8945103648c08d27d5e202444ca.1920x1080.jpg?t=1759502961",
+      "preco": 299.9,
+      "destaque": true,
+      "tags": [
+        "Aventura",
+        "Narrativa",
+        "Velho Oeste"
+      ]
+    },
+    {
+      "produto": "PRAGMATA",
+      "categoria": "Ficção Cientifica",
+      "descricao": "Pragmata é um jogo de ação e aventura com elementos de ficção científica da Capcom. Acompanhe Hugh, membro de uma arruinada equipe de investigação, e Diana, um androide, enquanto exploram uma instalação lunar controlada por uma IA rebelde e tentam voltar à Terra.",
+      "foto": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3357650/e8f77d8e2ee8098847306490803433950e7c90fc/ss_e8f77d8e2ee8098847306490803433950e7c90fc.1920x1080.jpg?t=1776398844",
+      "preco": 259.9,
+      "destaque": true,
+      "tags": [
+        "Acao",
+        "Ficcao",
+        "Fofo"
+      ],
+      "id": 4
+    }
+  ],
+  "campanhas": [
+    {
+      "id": 1,
+      "titulo": "Grand Theft Auto V",
+      "subtitulo": "Campanha principal",
+      "descricao": "Visual impactante para abrir a vitrine com um dos maiores sucessos do genero mundo aberto.",
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/library_hero.jpg?t=1765387725"
+    },
+    {
+      "id": 2,
+      "titulo": "Cyberpunk 2077",
+      "subtitulo": "Destaque futurista",
+      "descricao": "Arte promocional forte para representar novidades, tecnologia e atmosfera premium na home.",
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/cf8cec802dc47d0f24b75f9eee135e96812e2652/library_hero.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "God of War",
+      "subtitulo": "Narrativa em alta",
+      "descricao": "Campanha visual com foco em aventura cinematografica para deixar a secao mais profissional.",
+      "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/library_hero.jpg"
+    }
+  ],
+  "destaquePrincipal": {
+    "id": 1,
+    "titulo": "Grand Theft Auto V",
+    "categoria": "Acao em mundo aberto",
+    "descricao": "Um dos jogos mais conhecidos do mundo, com mapa aberto, acao intensa e uma campanha marcante.",
+    "imagem": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/library_hero.jpg?t=1765387725",
+    "selo": "Mais vendido",
+    "tags": [
+      "Acao",
+      "Mundo aberto",
+      "Online"
+    ]
+  }
+}
